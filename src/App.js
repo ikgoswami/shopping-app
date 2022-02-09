@@ -14,7 +14,7 @@ import Home from './components/Home';
 import SplashScreen from './components/SplashScreen';
 import Login from './components/Login';
 import NavHeader from './components/NavHeader';
-
+import Products from './components/Products';
 import ClockLoader from "react-spinners/ClockLoader";
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
       <Route exact path='/' element={< SplashScreen />}></Route>
       <Route exact path='/home' element={<Home  />}></Route>
       <Route exact path='/login' element={<Login />}></Route>
+      <Route exact path='/products/:id' element={<Products />}></Route>
       </Routes>
       
     </Router>
