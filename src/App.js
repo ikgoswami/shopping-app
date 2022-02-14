@@ -17,6 +17,8 @@ import NavHeader from './components/NavHeader';
 import Products from './components/Products';
 import ClockLoader from "react-spinners/ClockLoader";
 import Product from './components/Product';
+import Checkout from './components/Checkout';
+
 function App() {
     // Loading state 
     const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +42,7 @@ function App() {
       <Route exact path='/login' element={<Login />}></Route>
       <Route exact path='/products/:id' element={<Products />}></Route>
       <Route exact path='/product/detail/:id' element={<Product />}></Route>
+      <Route exact path='/checkout' element={<Checkout />}></Route>
       </Routes>
       
     </Router>
