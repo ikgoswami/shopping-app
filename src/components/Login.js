@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useEffect} from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { useNavigate } from "react-router-dom";
 import './splash.css'
+
 function Login() {
   const [email, setEmail]=useState("");
-
+  const navigate = useNavigate();
   const isEmailValid=(email)=>{
     
     const regex =
@@ -32,8 +34,10 @@ function Login() {
       <Label for="email">Email</Label>
       <Input type="email" name="email" id="email"  onChange={handleChange} value={email}/>
     </FormGroup>
-    <Button onClick={handleClick} class="btn btn-success">Submit</Button>
+    <Button onClick={handleClick} class="btn btn-primary">Login</Button>
   </Form>
+  <Button onClick={()=>{navigate(`/`)}} class="btn btn-success" style={{marginTop:"5em"}}>Back to Home
+  </Button>
   </div>;
 }
 
