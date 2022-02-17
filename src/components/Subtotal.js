@@ -6,6 +6,11 @@ import { useStateValue } from "./StateProvider";
 
 function Subtotal() {
   const [{ basket }, dispatch] = useStateValue();
+  const removeAllFromBasket=()=>{
+    dispatch({
+        type: 'REMOVE_ALL_FROM_BASKET'
+    })
+}
     return (
         <div className="subtotal">
             <CurrencyFormat
@@ -23,7 +28,7 @@ function Subtotal() {
         prefix={"$"}
       />
 
-        <button>Proceed to Checkout</button> 
+        <button onClick={removeAllFromBasket}>Proceed to Checkout</button> 
         </div>
     )
 }
