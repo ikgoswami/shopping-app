@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useEffect} from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { useNavigate } from "react-router-dom";
 import './splash.css'
